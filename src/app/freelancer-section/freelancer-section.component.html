@@ -1,0 +1,48 @@
+<div class="freelancer-section-container">
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">
+      <h1>CoderLink</h1>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar Freelancers" />
+      <button class="filter-btn" (click)="filterFreelancers()">Filtrar</button>
+      <select class="sort-dropdown">
+        <option value="recommended">Recomendado</option>
+        <option value="lowest-price">Precio más bajo</option>
+        <option value="highest-rating">Mejor calificación</option>
+      </select>
+    </div>
+    <nav class="nav-links">
+      <a href="#">Inicio</a>
+      <a href="#">Explorar</a>
+      <a href="#">Proyectos</a>
+      <a href="#">Iniciar Sesión</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <section class="freelancer-listing">
+      <h2>Busque Freelancers indicados para su proyecto</h2>
+      <p>¿Buscas freelancers de primer nivel? Coderlink te los proporciona</p>
+
+      <!-- Freelancer Cards -->
+      <div class="freelancer-list">
+        <div class="freelancer-card" *ngFor="let freelancer of freelancers">
+          <div class="freelancer-img">
+            <img [src]="freelancer.imageUrl" alt="Freelancer Profile" />
+          </div>
+          <div class="freelancer-info">
+            <h3>{{ freelancer.name }}</h3>
+            <p>{{ freelancer.description }}</p>
+            <p class="rating">⭐ {{ freelancer.rating }} ({{ freelancer.reviews }})</p>
+            <p class="price">${{ freelancer.hourlyRate }}/h</p>
+            <button class="view-profile-btn" (click)="viewProfile(freelancer)">Ver Perfil</button>
+            <button class="favorite-btn">❤️</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

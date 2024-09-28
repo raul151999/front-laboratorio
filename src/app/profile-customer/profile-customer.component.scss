@@ -1,0 +1,168 @@
+/* Página de perfil */
+.profile-page {
+  height: 100vh; /* Ocupa toda la pantalla */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6fa1a4; 
+  position: relative;
+}
+/* Botón de regresar en la parte superior izquierda */
+.back-home-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: darken(#007bff, 10%);
+  }
+}
+/* Contenedor principal */
+.profile-customer-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado del perfil */
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .profile-info {
+    h2 {
+      font-size: 2rem;
+      margin: 0;
+      color: #333;
+    }
+
+    .customer-description {
+      color: #666;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .edit-profile-btn {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken(#007bff, 10%);
+      }
+    }
+  }
+}
+
+/* Sección de proyectos */
+.projects-section {
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .create-project-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken(#28a745, 10%);
+    }
+  }
+
+  .projects-list {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      background-color: #f9f9f9;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      
+      h4 {
+        margin: 0;
+        color: #007bff;
+        font-size: 1.2rem;
+      }
+
+      p {
+        color: #666;
+        margin: 10px 0;
+      }
+
+      .view-project-btn {
+        padding: 8px 16px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken(#28a745, 10%);
+        }
+      }
+    }
+  }
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .profile-image {
+      margin-bottom: 20px;
+    }
+  }
+.projects-section {
+  .create-project-btn {
+    width: 100%; /* Botón de crear proyecto ocupa todo el ancho en móviles */
+     }
+  }
+}

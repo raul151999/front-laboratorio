@@ -1,0 +1,135 @@
+/* Página de registro */
+.register-page {
+  min-height: 100vh; /* Ocupa al menos toda la pantalla */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6fa1a4; /* Color de fondo */
+  overflow-y: auto; /* Permite hacer scroll en la página si el contenido es más grande que la ventana */
+}
+
+.register-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin: 20px; /* Agrega un margen para evitar que el contenedor se corte en las esquinas */
+  box-sizing: border-box; /* Incluye padding y border en el tamaño del elemento */
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .google-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken(#4285F4, 10%);
+    }
+  }
+
+  .input-group {
+    text-align: left;
+    margin-bottom: 20px;
+
+    label {
+      font-size: 0.9rem;
+      color: #333;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      background-color: #f9f9f9;
+      resize: vertical;
+    }
+  }
+
+  .error-message {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    input {
+      margin-right: 10px;
+    }
+
+    label {
+      font-size: 0.9rem;
+      color: #333;
+    }
+  }
+
+  .register-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken(#007bff, 10%);
+    }
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+
+  p {
+    margin-top: 20px;
+    font-size: 0.9rem;
+
+    a.login-link {
+      color: #007bff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/* Ajustes responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .register-container {
+    width: 90%; /* Ocupa el 90% del ancho de la pantalla */
+  }
+}
+
+/* Ajustes para zoom y scroll */
+html, body {
+  overflow-y: auto; /* Permite que el cuerpo haga scroll si el contenido es mayor */
+}
