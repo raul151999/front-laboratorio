@@ -4,7 +4,7 @@
     <h2>Detalles del Proyecto</h2>
     
     <div class="project-info">
-      <h3>{{ project.title }}</h3>
+      <p *ngIf="project?.title"><strong>Nombre del Proyecto:</strong> {{ project.title }}</p>
       <p><strong>Nombre del Proyecto:</strong> {{ project.name }}</p>
       <p><strong>Descripción:</strong> {{ project.description }}</p>
       <p><strong>Presentación:</strong> {{ project.presentation }}</p>

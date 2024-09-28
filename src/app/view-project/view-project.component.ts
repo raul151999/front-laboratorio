@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router'; // Importar Router
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-view-project',
   standalone: true,
-  imports: [],
+  imports: [NgIf],
   templateUrl: './view-project.component.html',
   styleUrls: ['./view-project.component.scss']
 })
