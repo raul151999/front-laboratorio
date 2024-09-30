@@ -22,7 +22,7 @@ import { CrearProyectoComponent } from '../crear-proyecto/crear-proyecto.compone
 import { ModifyProjectComponent } from '../modify-project/modify-project.component';
 import { ViewProjectComponent } from '../view-project/view-project.component';
 import { HireDeveloperComponent } from '../hire-developer/hire-developer.component';
-
+import { HeaderComponent } from '../shared/header/header.component';
 
 @NgModule({
   declarations: [
@@ -44,12 +44,13 @@ import { HireDeveloperComponent } from '../hire-developer/hire-developer.compone
     ModifyProjectComponent,
     ViewProjectComponent,
     HireDeveloperComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
     CommonModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]
