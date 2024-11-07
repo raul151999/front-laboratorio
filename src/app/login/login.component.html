@@ -4,6 +4,7 @@
   </header>
 <div class="login-container">
   <h2>Iniciar Sesión</h2>
+  
   <form (ngSubmit)="login()" #loginForm="ngForm">
     <!-- Campo de correo electrónico con validación -->
     <label for="email">Correo Electrónico</label>
@@ -15,8 +16,6 @@
            required 
            email 
            #emailInput="ngModel">
-
-    <!-- Mostrar mensaje de error si el correo electrónico no es válido -->
     <div *ngIf="emailInput.invalid && emailInput.touched" class="error-message">
       Ingresa un correo electrónico válido.
     </div>
